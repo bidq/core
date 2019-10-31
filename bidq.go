@@ -255,10 +255,10 @@ func publish(cs *connset.ConnectionsSet) {
 	}
 }
 
-func Start(timeout time.Duration) {
+func Start(host string, port uint16, timeout time.Duration) {
 	cs := connset.MakeConnectionSet()
 	handler := makeConnectionHandler(cs)
-	srv := &server{host: "127.0.0.1", port: 8888, handler: handler}
+	srv := &server{host: host, port: port, handler: handler}
 	go srv.Listen()
 	go publish(cs)
 	handleMessages(timeout)
