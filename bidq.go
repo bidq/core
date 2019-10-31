@@ -1,4 +1,4 @@
-package main
+package bidq
 
 import (
 	"encoding/json"
