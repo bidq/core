@@ -9,8 +9,8 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/bidq/bidq/connset"
-	"github.com/bidq/bidq/enums"
+	"github.com/bidq/core/connset"
+	"github.com/bidq/core/enums"
 )
 
 type reply struct {
